@@ -98,7 +98,8 @@ public class SymbolManager : MonoBehaviour
             _listPictoInfoWithGo.Remove(_pictoInfoToRemove);
             _pictoInfoToRemove.GameObject.GetComponent<SpriteRenderer>().color = _green;
             //Destroy(_pictoInfoToRemove.FogGameObject);
-            //_pictoInfoToRemove.FogGameObject.GetComponent<FogEffect>().Fade();
+            //FogEffect fogEffect = _pictoInfoToRemove.FogGameObject.GetComponent<FogEffect>();
+            //fogEffect.Fade();
             Debug.Log("Removed Symbol : " + _pictoInfoToRemove.PictoCode.PictoSymbol);
             _canRemovePicto = false;
         }

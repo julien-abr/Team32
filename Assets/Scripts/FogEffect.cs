@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class FogEffect : MonoBehaviour
 {
@@ -10,21 +11,26 @@ public class FogEffect : MonoBehaviour
     [SerializeField]
     private float _fadeTime;
 
-    public void Start()
-    {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    private YieldInstruction fadeInstruction = new YieldInstruction();
 
     public void Fade()
     {
-        Debug.Log("Fade");
-        SpriteRenderer.DOFade(0, _fadeTime);
-        StartCoroutine(DestroyTime());
+        gameObject.SetActive(true);
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(FadeOut());
     }
 
-    public IEnumerator DestroyTime()
+    IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(_fadeTime);
-        Destroy(gameObject);
+        float elapsedTime = 0.0f;
+        Color c = SpriteRenderer.color;
+        while (elapsedTime < _fadeTime)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime;
+            c.a = 1.0f - Mathf.Clamp01(elapsedTime / _fadeTime);
+            SpriteRenderer.color = c;
+            Debug.Log(c.a);
+        }
     }
 }
