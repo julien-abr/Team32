@@ -13,12 +13,11 @@ public class FindPictoScriptableObject : ScriptableObject
     public float MalusDuration;
 
     public List<PictoInfo> ArrayOfPicto;
+}
 
-
-    [Serializable]
-    public struct PictoInfo
-    {
-        public KeyCode PictoCode;
-        public Vector2 PictoPosition;
-    }
+[Serializable]
+public struct PictoInfo
+{
+    public PictoScriptableObject PictoCode;
+    public Vector2 PictoPosition;
 }

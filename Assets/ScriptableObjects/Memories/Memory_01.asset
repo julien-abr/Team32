@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbba3cccc41d9243abb35f38eb6d8d5, type: 3}
   m_Name: Memory_01
   m_EditorClassIdentifier: 
-  MemoryImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  MemoryImage: {fileID: 21300000, guid: a26429158797cc3478574bfbd7694a2b, type: 3}
   TimerDuration: 100
   MalusDuration: 10
   ArrayOfPicto:
-  - PictoCode: 97
+  - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
     PictoPosition: {x: 0, y: 0}
-  - PictoCode: 98
-    PictoPosition: {x: 0, y: 0}
+  - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
+    PictoPosition: {x: 2, y: -2}

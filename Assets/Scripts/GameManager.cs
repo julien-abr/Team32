@@ -3,22 +3,35 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Level Creation")]
     [SerializeField]
     private List<ScriptableObject> ListScriptableObjects;
     private int _levelIndex = 0;
 
+    [Header("ScriptsVar")]
     [SerializeField]
     private InputManager _inputManager;
-
+    [SerializeField]
+    private SymbolManager _symbolManager;
     [SerializeField]
     private SetupTimer _setupTimer;
+    [SerializeField]
+    private TransitionManager _transitionManager;
+    [SerializeField]
+    private AnimationEventReceiver _animationEventReceiver;
+
+    [Header("BackgroundSprite")]
+    [SerializeField]
+    private SpriteRenderer _backgroundSprite;
 
     private ScriptableObject _currentLevelInfo;
 
     private void Start()
     {
-        _setupTimer.InitSlider(this);
-        _inputManager.InitInput(this, _setupTimer);
+        _animationEventReceiver.Init(this);
+        _setupTimer.Init(this);
+        _inputManager.Init(_symbolManager, _setupTimer);
+        _symbolManager.Init(this, _setupTimer);
         StartNextLevel();
     }
 
@@ -27,16 +40,22 @@ public class GameManager : MonoBehaviour
         ScriptableObject NextLevel = ListScriptableObjects[_levelIndex];
         _currentLevelInfo = NextLevel;
 
-        if (NextLevel as FindPictoScriptableObject != null)
+        switch(NextLevel)
         {
-            Debug.Log("Starting FindPicto level");
-            FindPictoScriptableObject findPictoScriptableObject = NextLevel as FindPictoScriptableObject;
-            _setupTimer.SetupSliderValue(findPictoScriptableObject.TimerDuration, findPictoScriptableObject.MalusDuration);
-            _inputManager.SetupFindPictoLevel(findPictoScriptableObject);
-            return;
+            case FindPictoScriptableObject findPictoScriptableObject:
+                Debug.Log("Starting FindPicto level");
+                SetupUI_FindPicto(findPictoScriptableObject);
+                _setupTimer.SetupSliderValue(findPictoScriptableObject.TimerDuration, findPictoScriptableObject.MalusDuration);
+                break;
+            case BossFightScriptableObject bossFightScriptableObject:
+                Debug.Log("Starting Boss Level");
+                _backgroundSprite.sprite = bossFightScriptableObject.BossImage;
+                break;
+            case TransitionScriptableObject transitionScriptableObject:
+                Debug.Log("Starting Transition Level");
+                _transitionManager.SetupTransition(transitionScriptableObject);
+                break;
         }
-
-        //Same with boss
     }
 
     public void SucceededLevel()
@@ -71,5 +90,18 @@ public class GameManager : MonoBehaviour
     public void Loose()
     {
         Debug.Log("U Loose");
+    }
+
+
+    private void SetupUI_FindPicto(FindPictoScriptableObject findPictoScriptableObject)
+    {
+        _backgroundSprite.sprite = findPictoScriptableObject.MemoryImage;
+        _symbolManager.SpawnSymbolAtPosition(findPictoScriptableObject);
+        SetCharacterState();
+    }
+
+    private void SetCharacterState()
+    {
+
     }
 }

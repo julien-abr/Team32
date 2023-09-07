@@ -21,7 +21,7 @@ public class SetupTimer : MonoBehaviour
         Debug.Log("Get timer color ref");
     }
 
-    public void InitSlider(GameManager manager)
+    public void Init(GameManager manager)
     {
         _gameManager = manager;
     }
@@ -50,7 +50,7 @@ public class SetupTimer : MonoBehaviour
             float gap = 1 - lerp;
             tempColor.a = gap;
             _timerImage.color = tempColor;
-            Debug.Log(tempColor.a);
+            //Debug.Log(tempColor.a);
 
             if(_currentDuration <= 0)
             {

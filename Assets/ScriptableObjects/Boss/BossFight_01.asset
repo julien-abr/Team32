@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f91a2c1d6f786c478ca097c88af092a, type: 3}
   m_Name: BossFight_01
   m_EditorClassIdentifier: 
+  BossImage: {fileID: 0}
+  _listPicto: 0000000000000000
+  IntervalMin: 5
+  IntervalMax: 10
+  Life: 3
