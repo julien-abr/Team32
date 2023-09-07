@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Engine Engine;
+
     [Header("Level Creation")]
     [SerializeField]
     private List<ScriptableObject> ListScriptableObjects;
     private int _levelIndex = 0;
+    
 
     [Header("ScriptsVar")]
     [SerializeField]
@@ -23,6 +26,11 @@ public class GameManager : MonoBehaviour
     [Header("BackgroundSprite")]
     [SerializeField]
     private SpriteRenderer _backgroundSprite;
+
+    [Header("GameOver")]
+    public bool _gameEnded;
+    [SerializeField]
+    private GameObject _gameOverObject;
 
     private ScriptableObject _currentLevelInfo;
 
@@ -90,6 +98,8 @@ public class GameManager : MonoBehaviour
     public void Loose()
     {
         Debug.Log("U Loose");
+        _gameEnded = true;
+        _gameOverObject.SetActive(true);
     }
 
 
@@ -104,4 +114,10 @@ public class GameManager : MonoBehaviour
     {
 
     }
+}
+
+public enum Engine
+{
+    PC,
+    Terminal,
 }

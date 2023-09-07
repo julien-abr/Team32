@@ -9,6 +9,8 @@ public class PictoScriptableObject : ScriptableObject
     public Sprite PictoSprite;
 
     public KeyCode PictoKeyCode;
+
+    public Sprite PictoFogSprite;
 }
 
 public enum Symbol

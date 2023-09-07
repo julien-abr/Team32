@@ -14,6 +14,11 @@ public class SymbolManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _symbolGo;
+    [SerializeField]
+    private GameObject _fogGo;
+
+    [SerializeField]
+    private GameObject _fogGoParent;
 
     private GameManager _gameManager;
     private SetupTimer _setupSlider;
@@ -71,6 +76,8 @@ public class SymbolManager : MonoBehaviour
             {
                 _setupSlider.Malus();
             }
+            break;
+
         }
 
         RemoveKey();
