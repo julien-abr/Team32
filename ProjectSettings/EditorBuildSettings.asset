@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/TitleScreen(Shane).unity
     guid: db93cbe7619af0a42b0bf0184a467e1c
   - enabled: 1
-    path: Assets/Scenes/Shane.unity
-    guid: 1dcac58ad87452d459061fd43dd683f8
+    path: Assets/Scenes/Julien.unity
+    guid: 2714aacd2c870cc4f8e598a951ab0130
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 63f11d165f40b1649baa0b16ac19d551
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 5ca231c3affd1ab4f9287918a553f8c0
   m_configObjects: {}

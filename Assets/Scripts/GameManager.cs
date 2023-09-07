@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,9 +29,10 @@ public class GameManager : MonoBehaviour
     private SpriteRenderer _backgroundSprite;
 
     [Header("GameOver")]
-    public bool _gameEnded;
     [SerializeField]
-    private GameObject _gameOverObject;
+    private string _winSceneName;
+    [SerializeField]
+    private string _gameOverSceneName;
 
     private ScriptableObject _currentLevelInfo;
 
@@ -93,13 +95,13 @@ public class GameManager : MonoBehaviour
     private void Win()
     {
         Debug.Log("U Win");
+        SceneManager.LoadScene(_winSceneName, LoadSceneMode.Single);
     }
 
     public void Loose()
     {
         Debug.Log("U Loose");
-        _gameEnded = true;
-        _gameOverObject.SetActive(true);
+        SceneManager.LoadScene(_gameOverSceneName, LoadSceneMode.Single);
     }
 
 

@@ -2372,6 +2372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea5d20e29e3f994793ed4e9fd827a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Julien
 --- !u!4 &1988733241
 Transform:
   m_ObjectHideFlags: 0

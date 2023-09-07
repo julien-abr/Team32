@@ -1073,8 +1073,8 @@ MonoBehaviour:
   _transitionManager: {fileID: 2014714511}
   _animationEventReceiver: {fileID: 810757434}
   _backgroundSprite: {fileID: 240672113}
-  _gameEnded: 0
-  _gameOverObject: {fileID: 0}
+  _winSceneName: YouWin
+  _gameOverSceneName: GameOverScreen
 --- !u!1 &2130461665
 GameObject:
   m_ObjectHideFlags: 0
