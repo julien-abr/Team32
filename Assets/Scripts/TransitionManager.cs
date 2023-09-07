@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TransitionManager : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class TransitionManager : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField]
-    private SpriteRenderer _plateformSprite;
+    private Image _plateformImg;
     [SerializeField]
-    private SpriteRenderer _characterSprite;
+    private Image _characterImg;
     [SerializeField]
     private Animator _characterAnimator;
     [SerializeField]
@@ -34,7 +35,7 @@ public class TransitionManager : MonoBehaviour
 
     private void SwapColor()
     {
-        if (_characterSprite.color == _black)
+        if (_characterImg.color == _black)
         {
             SetSpriteWhite();
         }
@@ -85,14 +86,14 @@ public class TransitionManager : MonoBehaviour
 
     private void SetSpriteWhite()
     {
-        _characterSprite.color = _white;
-        _plateformSprite.color = _white;
+        _characterImg.color = _white;
+        _plateformImg.color = _white;
     }
 
     private void SetSpriteBlack()
     {
-        _characterSprite.color = _black;
-        _plateformSprite.color = _black;
+        _characterImg.color = _black;
+        _plateformImg.color = _black;
     }
 
 }
