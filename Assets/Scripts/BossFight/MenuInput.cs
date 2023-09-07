@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class MenuInput : MonoBehaviour
 {
     public UnityEvent action;
+    public KeyCode key;
 
     
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class MenuInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && action != null)
+        if (Input.GetKeyDown(key) && action != null)
         {
             action.Invoke();
         }

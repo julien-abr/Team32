@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
 
+    public string sceneName;
+
     public void OnStartButtonPress()
     {
-        Debug.Log("Start Game");
-        SceneManager.LoadScene("Shane", LoadSceneMode.Single);
+        Debug.Log("Play Again");
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     public void OnQuitButtonPress()
