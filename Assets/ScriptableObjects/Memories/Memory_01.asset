@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MemoryImage: {fileID: 21300000, guid: d2802f94d6ca112409f22d9a8646b4b9, type: 3}
   TimerDuration: 100
-  MalusDuration: 10
+  MalusDuration: 5
   ArrayOfPicto:
-  - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
+  - PictoCode: {fileID: 11400000, guid: 23be14068f8b34b44aa229510ae5cf94, type: 2}
     PictoPosition: {x: 0, y: 0}
-  - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
+  - PictoCode: {fileID: 11400000, guid: 312dc423d8b76d449b1cb2c1565bd65b, type: 2}
     PictoPosition: {x: 2, y: -2}
-  - PictoCode: {fileID: 11400000, guid: e1168bf9dd78e884b9d046599f1d6ca8, type: 2}
+  - PictoCode: {fileID: 11400000, guid: f4c4886a79e8a7049853bec3e97b5694, type: 2}
     PictoPosition: {x: -2, y: 0.5}

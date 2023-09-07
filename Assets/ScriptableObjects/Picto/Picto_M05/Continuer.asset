@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7af617be1d51344f8df6525f29018ba, type: 3}
-  m_Name: Plus
+  m_Name: Continuer
   m_EditorClassIdentifier: 
-  PictoSymbol: 1
-  PictoSprite: {fileID: 21300000, guid: 5dc7ae1138b02b644ac4be9db8144078, type: 3}
+  PictoSymbol: 5
+  PictoSprite: {fileID: 21300000, guid: 9d395d29adfac8e48a9301cf6fca4c6d, type: 3}
   PictoKeyCode: 122
+  PictoFogSprite: {fileID: 21300000, guid: 94a1371b5a778b340827e4d0563ca886, type: 3}

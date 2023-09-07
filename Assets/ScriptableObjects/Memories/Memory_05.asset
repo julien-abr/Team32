@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbba3cccc41d9243abb35f38eb6d8d5, type: 3}
   m_Name: Memory_05
   m_EditorClassIdentifier: 
-  MemoryImage: {fileID: 21300000, guid: 5fd37b864fe6c6245a2767e743639022, type: 3}
-  TimerDuration: 80
-  MalusDuration: 7
+  MemoryImage: {fileID: 21300000, guid: 6a06266563c2abc4c9feab426a7b5e62, type: 3}
+  TimerDuration: 45
+  MalusDuration: 5
   ArrayOfPicto:
-  - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
+  - PictoCode: {fileID: 11400000, guid: 650ac411adc37544890ee0fb42543fa8, type: 2}
     PictoPosition: {x: -1, y: 0.5}
-  - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
+  - PictoCode: {fileID: 11400000, guid: 00798f402de49f648babd5cc68aa6a2a, type: 2}
     PictoPosition: {x: 0.5, y: 0.5}
+  - PictoCode: {fileID: 11400000, guid: bf6c7687c456bca4ab6d363c9efb0ebb, type: 2}
+    PictoPosition: {x: 1.32, y: 0.07}
+  - PictoCode: {fileID: 11400000, guid: af3d510370e8fd64a8667740113d2690, type: 2}
+    PictoPosition: {x: 0.14, y: 0.78}
+  - PictoCode: {fileID: 11400000, guid: 22944c8b7b1aed4428a8cc11adf63748, type: 2}
+    PictoPosition: {x: 0.26, y: 0.5}

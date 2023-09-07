@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7af617be1d51344f8df6525f29018ba, type: 3}
-  m_Name: Interdiction
+  m_Script: {fileID: 11500000, guid: 748125c10d9488b498c7c16018336b25, type: 3}
+  m_Name: Transition_03
   m_EditorClassIdentifier: 
-  PictoSymbol: 4
-  PictoSprite: {fileID: 21300000, guid: 5746632fd2ea52f42bafd274f743769e, type: 3}
-  PictoKeyCode: 283
+  NewState: 3
+  ColorShouldSwap: 0
+  TransitionEffect: 3

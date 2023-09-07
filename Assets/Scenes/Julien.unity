@@ -1066,6 +1066,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49038ac380e26284e9a957508399fbfc, type: 2}
   - {fileID: 11400000, guid: b4de559ea151d22418ac0b8d540c8813, type: 2}
   - {fileID: 11400000, guid: ffa56c7d589456843ba40eb789c5d2b8, type: 2}
+  - {fileID: 11400000, guid: c6f34f099c9264d4db880da075301bf9, type: 2}
+  - {fileID: 11400000, guid: c382a8e21b5b94a4ea7e4a12067df9de, type: 2}
+  - {fileID: 11400000, guid: c6f34f099c9264d4db880da075301bf9, type: 2}
+  - {fileID: 11400000, guid: e271da26a6bd6e64a9e21d37bc92349d, type: 2}
+  - {fileID: 11400000, guid: 7810829bfb0cf154ba1641c39d48dc9f, type: 2}
+  - {fileID: 11400000, guid: 4a04f9f0fb1d92143ac3ce671111b639, type: 2}
   _inputManager: {fileID: 1453077609}
   _symbolManager: {fileID: 1372016538}
   _setupTimer: {fileID: 1984175186}
