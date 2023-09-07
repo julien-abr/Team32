@@ -47,13 +47,14 @@ public class SymbolManager : MonoBehaviour
             PictoInfoWithGo pictoInfoWithGo = new PictoInfoWithGo();
             pictoInfoWithGo.PictoCode = pictoInfo.PictoCode;
             pictoInfoWithGo.GameObject = go;
+            pictoInfoWithGo.FogGameObject = _fogGo;
             _listPictoInfoWithGo.Add(pictoInfoWithGo);
         }
     }
 
     public void SpawnSymbolRandomly(PictoScriptableObject pictoScriptableObject)
     {
-        ResetSymbol();
+        /*ResetSymbol();
 
         GameObject go = Instantiate(_symbolGo, transform.position, Quaternion.identity);
         go.transform.parent = transform;
@@ -63,7 +64,7 @@ public class SymbolManager : MonoBehaviour
         pictoInfoWithGo.PictoCode = pictoScriptableObject;
         pictoInfoWithGo.GameObject = go;
         pictoInfoWithGo.FogGameObject = _fogGo;
-        _listPictoInfoWithGo.Add(pictoInfoWithGo);
+        _listPictoInfoWithGo.Add(pictoInfoWithGo);*/
     }
 
     public void CheckIfSymboleHasSameKeyCode(KeyCode keyPressed) //Check if any of symbols have the same key
@@ -96,6 +97,8 @@ public class SymbolManager : MonoBehaviour
             _listPictoInfoWithGoFound.Add(_pictoInfoToRemove);
             _listPictoInfoWithGo.Remove(_pictoInfoToRemove);
             _pictoInfoToRemove.GameObject.GetComponent<SpriteRenderer>().color = _green;
+            //Destroy(_pictoInfoToRemove.FogGameObject);
+            //_pictoInfoToRemove.FogGameObject.GetComponent<FogEffect>().Fade();
             Debug.Log("Removed Symbol : " + _pictoInfoToRemove.PictoCode.PictoSymbol);
             _canRemovePicto = false;
         }

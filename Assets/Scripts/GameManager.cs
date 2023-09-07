@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Engine Engine;
-
     [Header("Level Creation")]
     [SerializeField]
     private List<ScriptableObject> ListScriptableObjects;
@@ -109,17 +107,7 @@ public class GameManager : MonoBehaviour
     {
         _backgroundSprite.sprite = findPictoScriptableObject.MemoryImage;
         _symbolManager.SpawnSymbolAtPosition(findPictoScriptableObject);
-        SetCharacterState();
     }
 
-    private void SetCharacterState()
-    {
-
-    }
 }
 
-public enum Engine
-{
-    PC,
-    Terminal,
-}
