@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbba3cccc41d9243abb35f38eb6d8d5, type: 3}
+  m_Name: Memory_01
+  m_EditorClassIdentifier: 
+  MemoryImage: {fileID: 21300000, guid: a26429158797cc3478574bfbd7694a2b, type: 3}
+  TimerDuration: 100
+  MalusDuration: 10
+  ArrayOfPicto:
+  - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
+    PictoPosition: {x: 0, y: 0}
+  - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
+    PictoPosition: {x: 2, y: -2}
