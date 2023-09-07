@@ -7,6 +7,8 @@ public class SymbolManager : MonoBehaviour
 {
     private List<PictoInfoWithGo> _listPictoInfoWithGo = new List<PictoInfoWithGo>();
 
+    private List<PictoInfoWithGo> _listPictoInfoWithGoFound = new List<PictoInfoWithGo>();
+
     private PictoInfoWithGo _pictoInfoToRemove;
     private bool _canRemovePicto;
 
@@ -16,6 +18,9 @@ public class SymbolManager : MonoBehaviour
     private GameManager _gameManager;
     private SetupTimer _setupSlider;
 
+    [SerializeField]
+    private Color _green;
+
     public void Init(GameManager manager, SetupTimer setupSlider)
     {
         _gameManager = manager;
@@ -23,12 +28,14 @@ public class SymbolManager : MonoBehaviour
     }
     public void SpawnSymbolAtPosition(FindPictoScriptableObject findPictoScriptableObject)
     {
+        ResetSymbol();
+
         foreach (PictoInfo pictoInfo in findPictoScriptableObject.ArrayOfPicto)
         {
             GameObject go = Instantiate(_symbolGo, new Vector3(pictoInfo.PictoPosition.x, pictoInfo.PictoPosition.y, -1), Quaternion.identity);
             go.transform.parent = transform;
             go.name = _symbolGo.name;
-            //go.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoSprite;
+            go.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoSprite;
             PictoInfoWithGo pictoInfoWithGo = new PictoInfoWithGo();
             pictoInfoWithGo.PictoCode = pictoInfo.PictoCode;
             pictoInfoWithGo.GameObject = go;
@@ -38,10 +45,12 @@ public class SymbolManager : MonoBehaviour
 
     public void SpawnSymbolRandomly(PictoScriptableObject pictoScriptableObject)
     {
+        ResetSymbol();
+
         GameObject go = Instantiate(_symbolGo, transform.position, Quaternion.identity);
         go.transform.parent = transform;
         go.name = _symbolGo.name;
-        //go.GetComponent<SpriteRenderer>().sprite = pictoScriptableObject.PictoSprite;
+        go.GetComponent<SpriteRenderer>().sprite = pictoScriptableObject.PictoSprite;
         PictoInfoWithGo pictoInfoWithGo = new PictoInfoWithGo();
         pictoInfoWithGo.PictoCode = pictoScriptableObject;
         pictoInfoWithGo.GameObject = go;
@@ -73,7 +82,9 @@ public class SymbolManager : MonoBehaviour
     {
         if (_canRemovePicto)
         {
+            _listPictoInfoWithGoFound.Add(_pictoInfoToRemove);
             _listPictoInfoWithGo.Remove(_pictoInfoToRemove);
+            _pictoInfoToRemove.GameObject.GetComponent<SpriteRenderer>().color = _green;
             Debug.Log("Removed Symbol : " + _pictoInfoToRemove.PictoCode.PictoSymbol);
             _canRemovePicto = false;
         }
@@ -86,6 +97,16 @@ public class SymbolManager : MonoBehaviour
             Debug.Log("Succeeded");
             _gameManager.SucceededLevel();
         }
+    }
+
+    private void ResetSymbol()
+    {
+        foreach(PictoInfoWithGo pictoInfoWithGo in _listPictoInfoWithGoFound)
+        {
+            Destroy(pictoInfoWithGo.GameObject);
+        }
+
+        _listPictoInfoWithGoFound.Clear();
     }
 }
 

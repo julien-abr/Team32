@@ -724,6 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _symbolGo: {fileID: 5395323247881111726, guid: a32d5d1d5ff5e464d9df1ca91e30904e, type: 3}
+  _green: {r: 0.22580564, g: 1, b: 0.069811285, a: 1}
 --- !u!1 &1453077607
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1090562139, guid: e4278bded13471c4dad3a169707e6d36, type: 3}
+  m_Sprite: {fileID: -465091081, guid: 57b0a8080e438c14c89836510e405d29, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

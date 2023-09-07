@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: One
   m_EditorClassIdentifier: 
   PictoSymbol: 3
-  PictoSprite: {fileID: 21300000, guid: a778c3767b99c4040be7a70e30c4d131, type: 3}
-  PictoKeyCode: 283
+  PictoSprite: {fileID: 21300000, guid: 2e82a24a9eb58d448aae88916824609e, type: 3}
+  PictoKeyCode: 9
