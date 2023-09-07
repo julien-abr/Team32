@@ -37,6 +37,9 @@ public class SymbolManager : MonoBehaviour
 
         foreach (PictoInfo pictoInfo in findPictoScriptableObject.ArrayOfPicto)
         {
+            GameObject goFog = Instantiate(_fogGo, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
+            goFog.transform.parent = _fogGoParent.transform;
+            goFog.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoFogSprite;
             GameObject go = Instantiate(_symbolGo, new Vector3(pictoInfo.PictoPosition.x, pictoInfo.PictoPosition.y, -1), Quaternion.identity);
             go.transform.parent = transform;
             go.name = _symbolGo.name;
@@ -59,6 +62,7 @@ public class SymbolManager : MonoBehaviour
         PictoInfoWithGo pictoInfoWithGo = new PictoInfoWithGo();
         pictoInfoWithGo.PictoCode = pictoScriptableObject;
         pictoInfoWithGo.GameObject = go;
+        pictoInfoWithGo.FogGameObject = _fogGo;
         _listPictoInfoWithGo.Add(pictoInfoWithGo);
     }
 
@@ -114,6 +118,16 @@ public class SymbolManager : MonoBehaviour
         }
 
         _listPictoInfoWithGoFound.Clear();
+
+        DestroyFogChildGo();
+    }
+
+    private void DestroyFogChildGo()
+    {
+        foreach (Transform child in _fogGoParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
 
@@ -122,5 +136,6 @@ public struct PictoInfoWithGo
 {
     public PictoScriptableObject PictoCode;
     public GameObject GameObject;
+    public GameObject FogGameObject;
 }
 

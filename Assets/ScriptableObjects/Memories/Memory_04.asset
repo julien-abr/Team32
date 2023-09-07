@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbba3cccc41d9243abb35f38eb6d8d5, type: 3}
-  m_Name: Memory_01
+  m_Name: Memory_04
   m_EditorClassIdentifier: 
-  MemoryImage: {fileID: 21300000, guid: d2802f94d6ca112409f22d9a8646b4b9, type: 3}
-  TimerDuration: 100
-  MalusDuration: 10
+  MemoryImage: {fileID: 21300000, guid: 5fd37b864fe6c6245a2767e743639022, type: 3}
+  TimerDuration: 80
+  MalusDuration: 7
   ArrayOfPicto:
   - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
-    PictoPosition: {x: 0, y: 0}
+    PictoPosition: {x: -1, y: 0.5}
   - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
-    PictoPosition: {x: 2, y: -2}
-  - PictoCode: {fileID: 11400000, guid: e1168bf9dd78e884b9d046599f1d6ca8, type: 2}
-    PictoPosition: {x: -2, y: 0.5}
+    PictoPosition: {x: 0.5, y: 0.5}
