@@ -12,7 +12,6 @@ public class FogEffect : MonoBehaviour
     private float _fadeTime;
 
     private YieldInstruction fadeInstruction = new YieldInstruction();
-
     public void Fade()
     {
         gameObject.SetActive(true);
