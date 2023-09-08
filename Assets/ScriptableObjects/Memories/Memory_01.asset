@@ -17,8 +17,8 @@ MonoBehaviour:
   MalusDuration: 5
   ArrayOfPicto:
   - PictoCode: {fileID: 11400000, guid: 23be14068f8b34b44aa229510ae5cf94, type: 2}
-    PictoPosition: {x: 0, y: 0}
+    PictoPosition: {x: -3.17, y: 0}
   - PictoCode: {fileID: 11400000, guid: 312dc423d8b76d449b1cb2c1565bd65b, type: 2}
-    PictoPosition: {x: 2, y: -2}
+    PictoPosition: {x: -2.22, y: -3.87}
   - PictoCode: {fileID: 11400000, guid: f4c4886a79e8a7049853bec3e97b5694, type: 2}
-    PictoPosition: {x: -2, y: 0.5}
+    PictoPosition: {x: -4.7, y: -4.28}

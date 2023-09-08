@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 240672111}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0761, y: 0.7349, z: 10}
+  m_LocalPosition: {x: 0.0761, y: 0.7349, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2802f94d6ca112409f22d9a8646b4b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3cc0a57018e4654cb39b3e8ecaef723, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -614,6 +614,7 @@ MonoBehaviour:
   _fogGo: {fileID: 5391400519193255797, guid: a01ffb68824ae7d44ab5d5fd3b08c2e1, type: 3}
   _fogGoParent: {fileID: 1005325954}
   _green: {r: 0.22580564, g: 1, b: 0.069811285, a: 1}
+  _victoryTimeToWait: 4
 --- !u!1 &1453077607
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +867,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1107,6 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbec22923d61d9f48bbb0fbc5b5d2716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
   ListScriptableObjects:
   - {fileID: 11400000, guid: 72d6be9e08ad44a4c9348eef1cc03382, type: 2}
   - {fileID: 11400000, guid: 49038ac380e26284e9a957508399fbfc, type: 2}

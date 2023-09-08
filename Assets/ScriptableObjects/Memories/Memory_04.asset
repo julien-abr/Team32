@@ -17,16 +17,16 @@ MonoBehaviour:
   MalusDuration: 5
   ArrayOfPicto:
   - PictoCode: {fileID: 11400000, guid: 01c9ef7c6bd4de14e8559f78df17ee43, type: 2}
-    PictoPosition: {x: -1, y: 0.5}
+    PictoPosition: {x: -2.5, y: 1}
   - PictoCode: {fileID: 11400000, guid: 770cf93dd8520b244ab9d5c7962283b9, type: 2}
-    PictoPosition: {x: 1.1, y: 0.83}
+    PictoPosition: {x: 2.19, y: -3.13}
   - PictoCode: {fileID: 11400000, guid: 64f278e3419ac2c4384e528225f41b99, type: 2}
-    PictoPosition: {x: 0.8, y: 0.68}
+    PictoPosition: {x: -2.28, y: 3.4}
   - PictoCode: {fileID: 11400000, guid: c8eee9bb3ec01da4cbaa69b08f3cf660, type: 2}
-    PictoPosition: {x: 0.71, y: 0.77}
+    PictoPosition: {x: -2.55, y: -3.23}
   - PictoCode: {fileID: 11400000, guid: feb14bf108aa2a44ebd0d974d7300c28, type: 2}
-    PictoPosition: {x: 0.2, y: 0.86}
+    PictoPosition: {x: -0.32, y: 2}
   - PictoCode: {fileID: 11400000, guid: 18fdd52cfdd38f14c82db6e500f53db4, type: 2}
-    PictoPosition: {x: 0.2, y: 0.71}
+    PictoPosition: {x: -1.26, y: -1.34}
   - PictoCode: {fileID: 11400000, guid: fec831d244f74964ea9e7f1705d2f85d, type: 2}
-    PictoPosition: {x: 0.12, y: 0.41}
+    PictoPosition: {x: -1.32, y: 2.9}
