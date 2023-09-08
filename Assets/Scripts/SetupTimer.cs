@@ -39,6 +39,12 @@ public class SetupTimer : MonoBehaviour
         _currentDuration -= _timerMalusDuration;
     }
 
+    public void Bonus()
+    {
+        Debug.Log("Taking Bonus");
+        _currentDuration += _timerMalusDuration;
+    }
+
     public void Update()
     {
         if (_canLooseTime)
