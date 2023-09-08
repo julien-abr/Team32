@@ -11,6 +11,10 @@ public class PictoScriptableObject : ScriptableObject
     public KeyCode PictoKeyCode;
 
     public Sprite PictoFogSprite;
+
+    public float ScaleMultiplier = 1;
+
+    public Color ColorAlpha = new Color(1f, 1f, 1f);
 }
 
 public enum Symbol

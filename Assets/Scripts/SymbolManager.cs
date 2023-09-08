@@ -37,17 +37,26 @@ public class SymbolManager : MonoBehaviour
 
         foreach (PictoInfo pictoInfo in findPictoScriptableObject.ArrayOfPicto)
         {
+            //Creating goFog
             GameObject goFog = Instantiate(_fogGo, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             goFog.transform.parent = _fogGoParent.transform;
             goFog.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoFogSprite;
+
+            //Creation symbole go
             GameObject go = Instantiate(_symbolGo, new Vector3(pictoInfo.PictoPosition.x, pictoInfo.PictoPosition.y, -1), Quaternion.identity);
             go.transform.parent = transform;
             go.name = _symbolGo.name;
-            go.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoSprite;
+            go.transform.localScale = go.transform.localScale * pictoInfo.PictoCode.ScaleMultiplier;
+            SpriteRenderer spriteRenderer = go.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = pictoInfo.PictoCode.PictoSprite;
+            spriteRenderer.color = pictoInfo.PictoCode.ColorAlpha;
+
+            //Creating struct and add to list
             PictoInfoWithGo pictoInfoWithGo = new PictoInfoWithGo();
             pictoInfoWithGo.PictoCode = pictoInfo.PictoCode;
             pictoInfoWithGo.GameObject = go;
             pictoInfoWithGo.FogGameObject = _fogGo;
+
             _listPictoInfoWithGo.Add(pictoInfoWithGo);
         }
     }
@@ -100,6 +109,7 @@ public class SymbolManager : MonoBehaviour
             //Destroy(_pictoInfoToRemove.FogGameObject);
             //FogEffect fogEffect = _pictoInfoToRemove.FogGameObject.GetComponent<FogEffect>();
             //fogEffect.Fade();
+
             Debug.Log("Removed Symbol : " + _pictoInfoToRemove.PictoCode.PictoSymbol);
             _canRemovePicto = false;
         }
