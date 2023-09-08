@@ -29,7 +29,6 @@ public class FogEffect : MonoBehaviour
             elapsedTime += Time.deltaTime;
             c.a = 1.0f - Mathf.Clamp01(elapsedTime / _fadeTime);
             SpriteRenderer.color = c;
-            Debug.Log(c.a);
         }
     }
 }

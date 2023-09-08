@@ -73,7 +73,8 @@ public class SymbolManager : MonoBehaviour
             {
                 _pictoInfoToRemove = pictoInfoWithGo;
                 _canRemovePicto = true;
-                //Find picto object & animate
+                //give bonus (malus positive value)
+                _setupSlider.Bonus();
             }
             else
             {
