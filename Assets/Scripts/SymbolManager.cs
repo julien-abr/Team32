@@ -82,13 +82,8 @@ public class SymbolManager : MonoBehaviour
                 _canRemovePicto = true;
                 //give bonus (malus positive value)
                 _setupSlider.Bonus();
+                break;
             }
-            else
-            {
-                _setupSlider.Malus();
-            }
-            break;
-
         }
 
         RemoveKey();
@@ -109,6 +104,10 @@ public class SymbolManager : MonoBehaviour
 
             Debug.Log("Removed Symbol : " + _pictoInfoToRemove.PictoCode.PictoSymbol);
             _canRemovePicto = false;
+        }
+        else
+        {
+            _setupSlider.Malus();
         }
     }
 
