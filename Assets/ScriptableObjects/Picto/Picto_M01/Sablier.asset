@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PictoSymbol: 1
   PictoSprite: {fileID: 21300000, guid: 956765872f23c554a83b5b845c83fb22, type: 3}
-  PictoKeyCode: 122
+  PictoKeyCode: 105
   PictoFogSprite: {fileID: 21300000, guid: 49e320e15edd5e5439ee5a27028935af, type: 3}
   ScaleMultiplier: 0.7
   ColorAlpha: {r: 1, g: 1, b: 1, a: 0.69803923}
