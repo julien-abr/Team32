@@ -16,3 +16,5 @@ MonoBehaviour:
   PictoSprite: {fileID: 21300000, guid: 9d395d29adfac8e48a9301cf6fca4c6d, type: 3}
   PictoKeyCode: 122
   PictoFogSprite: {fileID: 21300000, guid: 94a1371b5a778b340827e4d0563ca886, type: 3}
+  ScaleMultiplier: 0.3
+  ColorAlpha: {r: 1, g: 1, b: 1, a: 0.29803923}
