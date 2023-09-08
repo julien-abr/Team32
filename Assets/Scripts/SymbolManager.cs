@@ -43,7 +43,7 @@ public class SymbolManager : MonoBehaviour
             goFog.GetComponent<SpriteRenderer>().sprite = pictoInfo.PictoCode.PictoFogSprite;
 
             //Creation symbole go
-            GameObject go = Instantiate(_symbolGo, new Vector3(pictoInfo.PictoPosition.x, pictoInfo.PictoPosition.y, -1), Quaternion.identity);
+            GameObject go = Instantiate(_symbolGo, new Vector3(pictoInfo.PictoPosition.x, pictoInfo.PictoPosition.y, 0), Quaternion.identity);
             go.transform.parent = transform;
             go.name = _symbolGo.name;
             go.transform.localScale = go.transform.localScale * pictoInfo.PictoCode.ScaleMultiplier;

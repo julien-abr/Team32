@@ -17,12 +17,12 @@ MonoBehaviour:
   MalusDuration: 5
   ArrayOfPicto:
   - PictoCode: {fileID: 11400000, guid: 415f9cefd8ee08042a46f49913077091, type: 2}
-    PictoPosition: {x: -1, y: 0.5}
+    PictoPosition: {x: -3.36, y: 1.41}
   - PictoCode: {fileID: 11400000, guid: 79dd51febaef59441b01f34a296b841e, type: 2}
-    PictoPosition: {x: 2.75, y: 0.5}
+    PictoPosition: {x: -0.73, y: -0.14}
   - PictoCode: {fileID: 11400000, guid: 3defcf4bacb5a924a9ccc334629cb72a, type: 2}
-    PictoPosition: {x: -0.13, y: 0.92}
+    PictoPosition: {x: -3.18, y: 4.8}
   - PictoCode: {fileID: 11400000, guid: e1168bf9dd78e884b9d046599f1d6ca8, type: 2}
-    PictoPosition: {x: -0.21, y: 0.83}
+    PictoPosition: {x: -1.59, y: -1.28}
   - PictoCode: {fileID: 11400000, guid: 893c3e1919e54fe42adfc0826e29c591, type: 2}
-    PictoPosition: {x: 0.2, y: 0.83}
+    PictoPosition: {x: 4.72, y: 4.91}
