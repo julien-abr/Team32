@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 using DG.Tweening;
 
 public class SymbolManager : MonoBehaviour
@@ -25,6 +26,11 @@ public class SymbolManager : MonoBehaviour
 
     [SerializeField]
     private Color _green;
+
+    [SerializeField]
+    private float _victoryTimeToWait;
+
+    private bool _canWin;
 
     public void Init(GameManager manager, SetupTimer setupSlider)
     {
@@ -67,6 +73,7 @@ public class SymbolManager : MonoBehaviour
 
     public void CheckIfSymboleHasSameKeyCode(KeyCode keyPressed) //Check if any of symbols have the same key
     {
+        if (!_canWin) { return; }
         foreach (PictoInfoWithGo pictoInfoWithGo in _listPictoInfoWithGo)
         {
             if (pictoInfoWithGo.PictoCode.PictoKeyCode == keyPressed)
@@ -110,7 +117,9 @@ public class SymbolManager : MonoBehaviour
         if (_listPictoInfoWithGo.Count == 0)
         {
             Debug.Log("Succeeded");
-            _gameManager.SucceededLevel();
+            _gameManager.gameState = GameState.None;
+            _canWin = false;
+            StartCoroutine(VictoryCoroutine());
         }
     }
 
@@ -124,6 +133,8 @@ public class SymbolManager : MonoBehaviour
         _listPictoInfoWithGoFound.Clear();
 
         DestroyFogChildGo();
+
+        _canWin = true;
     }
 
     private void DestroyFogChildGo()
@@ -132,6 +143,12 @@ public class SymbolManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    IEnumerator VictoryCoroutine()
+    {
+        yield return new WaitForSeconds(_victoryTimeToWait);
+        _gameManager.SucceededLevel();
     }
 }
 

@@ -614,6 +614,7 @@ MonoBehaviour:
   _fogGo: {fileID: 5391400519193255797, guid: a01ffb68824ae7d44ab5d5fd3b08c2e1, type: 3}
   _fogGoParent: {fileID: 1005325954}
   _green: {r: 0.22580564, g: 1, b: 0.069811285, a: 1}
+  _victoryTimeToWait: 4
 --- !u!1 &1453077607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbec22923d61d9f48bbb0fbc5b5d2716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
   ListScriptableObjects:
   - {fileID: 11400000, guid: 72d6be9e08ad44a4c9348eef1cc03382, type: 2}
   - {fileID: 11400000, guid: 49038ac380e26284e9a957508399fbfc, type: 2}

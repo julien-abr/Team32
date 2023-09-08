@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("GameState")]
+    public GameState gameState = GameState.None;
+
     [Header("Level Creation")]
     [SerializeField]
     private List<ScriptableObject> ListScriptableObjects;
@@ -38,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         _animationEventReceiver.Init(this);
         _setupTimer.Init(this);
-        _inputManager.Init(_symbolManager, _setupTimer);
+        _inputManager.Init(_symbolManager, _setupTimer, this);
         _symbolManager.Init(this, _setupTimer);
         StartNextLevel();
     }
@@ -52,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             case FindPictoScriptableObject findPictoScriptableObject:
                 Debug.Log("Starting FindPicto level");
+                gameState = GameState.FindPicto;
                 SetupUI_FindPicto(findPictoScriptableObject);
                 _setupTimer.SetupSliderValue(findPictoScriptableObject.TimerDuration, findPictoScriptableObject.MalusDuration);
                 break;
@@ -61,6 +65,7 @@ public class GameManager : MonoBehaviour
                 break;
             case TransitionScriptableObject transitionScriptableObject:
                 Debug.Log("Starting Transition Level");
+                gameState = GameState.Transition;
                 _transitionManager.SetupTransition(transitionScriptableObject);
                 break;
         }
@@ -108,6 +113,11 @@ public class GameManager : MonoBehaviour
         _backgroundSprite.sprite = findPictoScriptableObject.MemoryImage;
         _symbolManager.SpawnSymbolAtPosition(findPictoScriptableObject);
     }
-
 }
 
+public enum GameState
+{
+    None,
+    FindPicto,
+    Transition
+}
