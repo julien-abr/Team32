@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen(Shane).unity
     guid: db93cbe7619af0a42b0bf0184a467e1c
   - enabled: 1
+    path: Assets/Scenes/IntroCutScene.unity
+    guid: 7e5254f008155354f9e40b0d49359cd0
+  - enabled: 1
     path: Assets/Scenes/Julien.unity
     guid: 2714aacd2c870cc4f8e598a951ab0130
   - enabled: 1
